@@ -27,7 +27,7 @@ wacc_engine/
 │       │   ├── cost_of_equity.py
 │       │   └── market_risk_premium.py
 │       ├── models/
-│       │   ├── asset_data.py
+│       │   ├── public_company.py
 │       │   └── private_company.py
 │       └── financial_data/
 │           ├── company_data.py
@@ -86,11 +86,11 @@ jb_asset = AssetData(asset)
 jb_data = jb_asset.get_data(period, interval)
 
 # Calculate cost of equity and cost of debt
-coe_jb = coe.get_coe(jb_data["Beta"])
+coe_jb = coe.get_coe(jb_data["Equity Beta"])
 cod_jb = cod.get_cod()
 
 # Calculate WACC
-wacc_jb = CalculateWACC(coe_jb, cod_jb, jb_data["Gearing"])
+wacc_jb = CalculateWACC(coe_jb, cod_jb, jb_data["Gearing Ratio"])
 wacc_jb_pre_tax = wacc_jb.pre_tax()
 ```
 
