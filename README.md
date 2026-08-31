@@ -46,7 +46,7 @@ wacc_engine/
 ## Installation
 ```bash
 git clone https://github.com/DeeshyData/WACC-Engine.git
-cd wacc_engine
+cd WACC-Engine
 pip install -r requirements.txt
 ```
 
